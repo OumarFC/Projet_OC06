@@ -20,7 +20,7 @@ Cette association est connue pour répertorier et classer des films suivant diff
 La page doit pouvoir afficher les catégories de films dans des caroussels à l'image du site "Netlix". 
 
 L'interface doit comprendre les zones suivantes :
- - Un bloc "Meilleur film, affichant la jaquette du film, le résumé, ainsi qu'un bouton permettant d'afficher les différentes informations.
+ - Un bloc "Meilleur film", affichant la jaquette du film, le résumé, ainsi qu'un bouton permettant d'afficher les différentes informations.
  - Un bloc "Films les mieux notés", affichant les jaquettes des 7 meilleurs films toutes catégories confondues. Des boutons doivent permettre de faire défiler les films de gauche à droite, et chaque clic sur une jaquette doit afficher les informations du film dans une fenêtre.
  - 3 autres blocs suivant le schéma du bloc "Films les mieux notés", les catégories étant au choix du développeur.
 
@@ -30,7 +30,7 @@ Le site fonctionne sur les 3 navigateurs les plus utilisés actuellement.
 
 ## Installation
   
-  1- Telecharger et installer la dernière version de Python.
+  1- Télécharger et installer la dernière version de Python.
   Pour ma part j'ai installé la version python 3.10.6
 		 
 2 - Depuis votre terminal sous windows ( cmd )  
@@ -45,10 +45,10 @@ pour cela lancer la commande
 ```
 mkdir < MyProject06 > 
 ```
-où MyProject04 est le nom de votre projet,
+où MyProject06 est le nom de votre projet,
 placez-vous dans le repertoire projet
 ```
-cd < MyProject04 > 
+cd < MyProject06 > 
 ```
 Créer votre environnement virtuel
 ```
@@ -67,7 +67,7 @@ activate.bat
 	
 Créez le fichier .gitignore à la racine de votre projet:   
 
-```~\MyProject04\.gitignore ```
+```~\MyProject06\.gitignore ```
 
 Editez le fichier .gitignore et ajouter les fichiers et repertoire que vous souhaitez exclure
 

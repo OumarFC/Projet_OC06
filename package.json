@@ -1,0 +1,24 @@
+{
+  "name": "projet_6",
+  "version": "1.0.0",
+  "description": "Serveur HTTP pour API REST",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OumarFC/Projet_OC06.git"
+  },
+  "keywords": [
+    "http",
+    "api",
+    "rest"
+  ],
+  "author": "Oumar Fodé CAMARA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OumarFC/Projet_OC06/issues"
+  },
+  "homepage": "https://github.com/OumarFC/Projet_OC06#readme"
+}
