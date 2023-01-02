@@ -30,10 +30,10 @@ function Modal(Id) {
 		const description = document.createElement("li");
 
 		title.innerHTML = "<b>Titre : </b>" + todo.title;
-		genres.innerHTML = "<b>Genre(s) : </b>" + todo.genres;
+		genres.innerHTML = "<b>Genre.s : </b>" + todo.genres;
 		year.innerHTML = "<b>Date de sortie : </b>" + todo.published;
 		imdb_score.innerHTML = "<b>Score IMBD : </b>" + todo.imdb_score;
-		directors.innerHTML = "<b>Réalisateur(s) : </b>" + todo.directors;
+		directors.innerHTML = "<b>Réalisateur.s : </b>" + todo.directors;
 		actors.innerHTML = "<b>Acteurs : </b>" + todo.actors;
 		duration.innerHTML = "<b>Durée : </b>" + todo.duration + " minutes.";
 		country.innerHTML = "<b>Pays d'origine : </b>" + todo.country_li;
@@ -101,7 +101,7 @@ fetch(UrlApi + Url)
   .then(() => {
 	    const carrousel = document.getElementsByClassName(contentId)[0].childNodes;
         carrousel.forEach(function (currentValue, currentIndex) {
-			currentValue.setAttribute("data-carousselPlace", currentIndex)
+			currentValue.setAttribute("data-caroussel", currentIndex)
 			if (currentIndex < 4) {
 				currentValue.style.display = "block"
 			} else {
@@ -142,7 +142,7 @@ function turn_right(arrow_right){
 	const divCarrousel = divParent.getElementsByTagName('div')[0]
 	const figures = divParent.getElementsByClassName('imgPreview')
 	for(var i = 0; i < figures.length; i++){
-		figures[i].dataset['carousselplace'] = (figures[i].dataset['carousselplace'] + 6 ) % 7
+		figures[i].dataset['caroussel'] = (figures[i].dataset['caroussel'] + 6 ) % 7
 	}
 	actualizeCarrousel(divCarrousel)
 }
@@ -152,7 +152,7 @@ function turn_left(arrow_left){
 	const divCarrousel = divParent.getElementsByTagName('div')[0]
 	const figures = divParent.getElementsByClassName('imgPreview')
 	for(var i = 0; i < figures.length; i++){
-		figures[i].dataset['carousselplace'] = (figures[i].dataset['carousselplace'] + 1) % 7
+		figures[i].dataset['caroussel'] = (figures[i].dataset['caroussel'] + 1) % 7
 	}
 	actualizeCarrousel(divCarrousel)
 }
@@ -172,7 +172,7 @@ function ShowBestMovie(url) {
 		  BestMovieImage.setAttribute("data-id", todo.id);
 
 		  const BestMovieContent = document.getElementById("BestMovie_content");
-		  const BestMovieTitle = document.createElement("h1");
+		  const BestMovieTitle = document.createElement("h2");
 		  const BestMovieDesc = document.createElement("p");
 
 		  BestMovieTitle.innerText = todo.title;
@@ -194,8 +194,7 @@ function ShowBestMovie(url) {
 function actualizeCarrousel(carrousel){
 	figures = carrousel.getElementsByClassName('imgPreview')
 	for(var i = 0; i < figures.length; i++){
-		if(figures[i].dataset['carousselplace'] < 4){
-
+		if(figures[i].dataset['caroussel'] < 4){
 			figures[i].style.display = "block"
 		} else {
 			figures[i].style.display = "none"
@@ -217,7 +216,7 @@ function actualizeCarrousel(carrousel){
       ShowBestMovie(MovieUrl);
     });
 
-    CreateCarouselSelect("?sort_by=-imdb_score&page_size=7 ", "?sort_by=-imdb_score&page=2", "images_BM") // Meilleurs films
+    CreateCarouselSelect("?sort_by=-imdb_score&page_size=7  ", "?sort_by=-imdb_score&page=2", "images_BM") // Meilleurs films
 	CreateCarouselSelect("?genre_contains=Drama&sort_by=-imdb_score", "?genre_contains=Drama&sort_by=-imdb_score&page=2", "images_AM") // caroussel de meilleurs films Dramatiques
 	CreateCarouselSelect("?genre_contains=Adventure&sort_by=-imdb_score", "?genre_contains=Adventure&sort_by=-imdb_score&page=2", "images_T") // caroussel de meilleurs films d'Aventures
 	CreateCarouselSelect("?genre_contains=Fantasy&sort_by=-imdb_score", "?genre_contains=Fantasy&sort_by=-imdb_score&page=2", "images_H") //caroussel de meilleur films Fantastiques

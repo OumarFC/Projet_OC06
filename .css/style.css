@@ -9,6 +9,15 @@ h1 {
 
 h2 {
   font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+h3 {
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 180px;
+  color: white;
 }
 
 em {
@@ -21,13 +30,17 @@ em {
 
 .header {
   border-radius: 5px;
-  color: #1f4d4d;
-  background-color: #74992e;
+  color: darkblue;
+  background-color: darkgreen;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 1px;
   border-style: 0px;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  align-items: center;
 }
 .header_title {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -48,15 +61,15 @@ li {
 }
 
 #bestMovieBlock {
-  background-color: #74992e;
+  background-color: darkgreen;
+  margin-bottom: 1px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 5px;
-  color: #1f4d4d;
+  color: white;
   height: 10%;
-  width: 400px;
+  width: 80%;
   text-align: center;
   align-items: center;
-  padding: 5px;
   margin: auto;
   border-style: 0px;
 }
@@ -139,23 +152,43 @@ li {
 
 #caroussel_BM {
   display: flex;
+  margin: auto;
   justify-content: space-around;
   border-style: 0px;
+  width: 80%;
+  height: 10%;
+  border-radius: 5px;
+  background-color: darkgreen;
 }
 #caroussel_AM {
   display: flex;
+  margin: auto;
   justify-content: space-around;
   border-style: 0px;
+  width: 80%;
+  height: 10%;
+  border-radius: 5px;
+  background-color: darkgreen;
 }
 #caroussel_T {
   display: flex;
+  margin: auto;
   justify-content: space-around;
   border-style: 0px;
+  width: 80%;
+  height: 10%;
+  border-radius: 5px;
+  background-color: darkgreen;
 }
 #caroussel_H {
   display: flex;
+  margin: auto;
   justify-content: space-around;
   border-style: 0px;
+  width: 80%;
+  height: 10%;
+  border-radius: 5px;
+  background-color: darkgreen;
 }
 
 .arrow-left {
