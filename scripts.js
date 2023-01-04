@@ -22,6 +22,7 @@ function Modal(Id) {
 		const genres = document.createElement("li");
 		const year = document.createElement("li");
 		const imdb_score = document.createElement("li");
+		const votes = document.createElement("li");
 		const directors = document.createElement("li");
 		const actors = document.createElement("li");
 		const duration = document.createElement("li");
@@ -33,17 +34,19 @@ function Modal(Id) {
 		genres.innerHTML = "<b>Genre.s : </b>" + todo.genres;
 		year.innerHTML = "<b>Date de sortie : </b>" + todo.published;
 		imdb_score.innerHTML = "<b>Score IMBD : </b>" + todo.imdb_score;
+		votes.innerHTML = "<b>Votes : </b>" + todo.votes;
 		directors.innerHTML = "<b>Réalisateur.s : </b>" + todo.directors;
 		actors.innerHTML = "<b>Acteurs : </b>" + todo.actors;
 		duration.innerHTML = "<b>Durée : </b>" + todo.duration + " minutes.";
 		country.innerHTML = "<b>Pays d'origine : </b>" + todo.country_li;
-		box_office_results.innerHTML = "<b>Box-office : </b>" + todo.worldwide_gross_income;
+		box_office_results.innerHTML = "<b>Résultat Box-office : </b>" + todo.worldwide_gross_income;
 		description.innerHTML = "<b>Résumé : </b>" + todo.description;
 
 		ContentModal[0].appendChild(title);
 		ContentModal[0].appendChild(genres);
 		ContentModal[0].appendChild(year);
 		ContentModal[0].appendChild(imdb_score);
+		ContentModal[0].appendChild(votes);
 		ContentModal[0].appendChild(directors);
 		ContentModal[0].appendChild(actors);
 		ContentModal[0].appendChild(duration);
