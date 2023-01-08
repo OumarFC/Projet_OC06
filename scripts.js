@@ -54,7 +54,7 @@ function Modal(Id) {
 		ContentModal[0].appendChild(box_office_results);
 		ContentModal[0].appendChild(description);
 
-		// Ferme la fenêtre quand l'utilisateur clique sur "X", et efface les données.
+		// Ferme la fenetre en cliquant sur <<X>> et efface les données
 		span.onclick = function() {
 		modal.style.display = "none";
 		const modal_image = document.getElementsByClassName("modal_image")[0];
@@ -64,7 +64,7 @@ function Modal(Id) {
 
 		}
 
-    	// Ferme la fenêtre quand l'utilisateur clique en dehors de la fenêtre, et efface les données.
+    	// Ferme la fenete en cliquant en dehors de la photo et efface les données
 		window.onclick = function(event) {
 		if (event.target == modal) {
 			modal.style.display = "none";
@@ -75,12 +75,15 @@ function Modal(Id) {
 		  	}
 	  	}
 	})
-    .catch(function(error) {
+    .catch(function(error) { // affiche l'erreur dans la console
       console.error('Error:', error);
 	});
 };
 
-// Création d'une image preview pour le caroussel.
+// -------------------------------------------------------------------//
+// fonction permettant de créer une image preview pour le caroussel.  //
+// -------------------------------------------------------------------//
+
 function showPreview(Url, indice, contentId) {
 fetch(UrlApi + Url)
   .then(function(res) {
@@ -117,6 +120,10 @@ fetch(UrlApi + Url)
     });
 }
 
+//----------------------------------------------------------------------------------//
+// Fonction permettant de charger les images dans les caroussels                    //
+//----------------------------------------------------------------------------------//
+
 function CreateCarouselSelect(url1, url2, ContentId) {
 
     // Création des sections d'images
@@ -140,6 +147,10 @@ for(var i=0; i < ArrowRight.length; i++){
 	})
 }
 
+//----------------------------------------------------------------------------------//
+// Fonction permettant de faire defiler les images vers la droite                   //
+//----------------------------------------------------------------------------------//
+
 function turn_right(arrow_right){
     const divParent = arrow_right.parentElement
 	const divCarrousel = divParent.getElementsByTagName('div')[0]
@@ -149,6 +160,10 @@ function turn_right(arrow_right){
 	}
 	actualizeCarrousel(divCarrousel)
 }
+
+//----------------------------------------------------------------------------------//
+// Fonction permettant de faire defiler les images vers la droite                   //
+//----------------------------------------------------------------------------------//
 
 function turn_left(arrow_left){
     const divParent = arrow_left.parentElement
@@ -160,7 +175,10 @@ function turn_left(arrow_left){
 	actualizeCarrousel(divCarrousel)
 }
 
-// Création de la fenêtre "meilleur film"
+//----------------------------------------------------------------------------------//
+// Fonction création de la fenetre meilleur film                                    //
+//----------------------------------------------------------------------------------//
+
 function ShowBestMovie(url) {
   fetch(url)
       .then(function(res) {
@@ -194,6 +212,10 @@ function ShowBestMovie(url) {
     })
   };
 
+//----------------------------------------------------------------------------------//
+// Fonction actualisation  de la caroussel d'images                                 //
+//----------------------------------------------------------------------------------//
+
 function actualizeCarrousel(carrousel){
 	figures = carrousel.getElementsByClassName('imgPreview')
 	for(var i = 0; i < figures.length; i++){
@@ -204,6 +226,10 @@ function actualizeCarrousel(carrousel){
 		}
 	}
 }
+
+//----------------------------------------------------------------------------------//
+// Fonction Main , fonction principale                                              //
+//----------------------------------------------------------------------------------//
 
   function main() {
 
@@ -219,10 +245,10 @@ function actualizeCarrousel(carrousel){
       ShowBestMovie(MovieUrl);
     });
 
-    CreateCarouselSelect("?sort_by=-imdb_score&page_size=7  ", "?sort_by=-imdb_score&page=2", "images_BM") // Meilleurs films
-	CreateCarouselSelect("?genre_contains=Drama&sort_by=-imdb_score", "?genre_contains=Drama&sort_by=-imdb_score&page=2", "images_AM") // caroussel de meilleurs films Dramatiques
-	CreateCarouselSelect("?genre_contains=Adventure&sort_by=-imdb_score", "?genre_contains=Adventure&sort_by=-imdb_score&page=2", "images_T") // caroussel de meilleurs films d'Aventures
-	CreateCarouselSelect("?genre_contains=Fantasy&sort_by=-imdb_score", "?genre_contains=Fantasy&sort_by=-imdb_score&page=2", "images_H") //caroussel de meilleur films Fantastiques
+    CreateCarouselSelect("?sort_by=-imdb_score&page_size=7  ", "?sort_by=-imdb_score&page=2", "images_meilleur") // Meilleurs films
+	CreateCarouselSelect("?genre_contains=Drama&sort_by=-imdb_score", "?genre_contains=Drama&sort_by=-imdb_score&page=2", "images_drame") // caroussel de meilleurs films Dramatiques
+	CreateCarouselSelect("?genre_contains=Adventure&sort_by=-imdb_score", "?genre_contains=Adventure&sort_by=-imdb_score&page=2", "images_aventure") // caroussel de meilleurs films d'Aventures
+	CreateCarouselSelect("?genre_contains=Fantasy&sort_by=-imdb_score", "?genre_contains=Fantasy&sort_by=-imdb_score&page=2", "images_fantastique") //caroussel de meilleur films Fantastiques
 }
 
 main()

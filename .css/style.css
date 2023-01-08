@@ -117,16 +117,16 @@ transform : scale(1.1);
 transition : 0.1s;
 }
 
-.images_BM {
+.images_meilleur {
 display : flex;
 }
-.images_AM {
+.images_aventure {
 display : flex;
 }
-.images_T {
+.images_drame {
 display : flex;
 }
-.images_H {
+.images_fantastique {
 display : flex;
 }
 
@@ -148,7 +148,7 @@ height : 30px;
 clip-path : polygon(100% 100%,100% 0,0 50%);
 }
 
-#caroussel_BM {
+#caroussel_meilleur {
 display : flex;
 margin : auto;
 justify-content : space-around;
@@ -159,7 +159,7 @@ border-radius : 5px;
 background-color : darkgreen;
 }
 
-#caroussel_AM {
+#caroussel_aventure {
 display : flex;
 margin : auto;
 justify-content : space-around;
@@ -170,7 +170,7 @@ border-radius : 5px;
 background-color : darkgreen;
 }
 
-#caroussel_T {
+#caroussel_drame {
 display : flex;
 margin : auto;
 justify-content : space-around;
@@ -181,7 +181,7 @@ border-radius : 5px;
 background-color : darkgreen;
 }
 
-#caroussel_H {
+#caroussel_fantastique {
 display : flex;
 margin : auto;
 justify-content : space-around;
