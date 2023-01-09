@@ -158,7 +158,7 @@ function turn_right(arrow_right){
 	for(var i = 0; i < figures.length; i++){
 		figures[i].dataset['caroussel'] = (figures[i].dataset['caroussel'] + 6 ) % 7
 	}
-	actualizeCarrousel(divCarrousel)
+	ActualizeCarrousel(divCarrousel)
 }
 
 //----------------------------------------------------------------------------------//
@@ -172,7 +172,7 @@ function turn_left(arrow_left){
 	for(var i = 0; i < figures.length; i++){
 		figures[i].dataset['caroussel'] = (figures[i].dataset['caroussel'] + 1) % 7
 	}
-	actualizeCarrousel(divCarrousel)
+	ActualizeCarrousel(divCarrousel)
 }
 
 //----------------------------------------------------------------------------------//
@@ -216,7 +216,7 @@ function ShowBestMovie(url) {
 // Fonction actualisation  de la caroussel d'images                                 //
 //----------------------------------------------------------------------------------//
 
-function actualizeCarrousel(carrousel){
+function ActualizeCarrousel(carrousel){
 	figures = carrousel.getElementsByClassName('imgPreview')
 	for(var i = 0; i < figures.length; i++){
 		if(figures[i].dataset['caroussel'] < 4){
